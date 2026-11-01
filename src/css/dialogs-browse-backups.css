@@ -130,7 +130,7 @@
 .browse-backups .session-details-info,
 .browse-backups .snapshot-details-info {
   font-size: 11px;
-  color: #bbb;
+  color: light-dark(#666, #bbb);
   line-height: 1.5em;
 }
 

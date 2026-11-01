@@ -5,7 +5,7 @@
 .textfield {
   box-sizing: border-box;
 
-  background: black;
+  background: light-dark(#b8b8b8, #252525);
   border: 1px solid #888;
   border-radius: 2px;
   padding: 3px 10px;

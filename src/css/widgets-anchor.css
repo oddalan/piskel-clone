@@ -38,7 +38,7 @@
 }
 
 .anchor-option:hover {
-  border: 3px solid white;
+  border: 3px solid rgb(131, 62, 62);
 }
 
 .anchor-option.selected {

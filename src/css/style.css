@@ -1,5 +1,9 @@
+:root {
+  color-scheme: light dark;
+}
+
 body {
-  background: #1d1d1d;
+  background: light-dark(#dfdfdf, #252525);
 }
 
 /* Browser fixes */
@@ -76,7 +80,7 @@ body {
 }
 
 .tooltip-descriptor {
-  color: #999;
+  color: light-dark(#c5c5c5, #3f3f3f);
 }
 
 .tooltip-descriptor:last-child {
@@ -85,7 +89,7 @@ body {
 
 .tooltip-descriptor-button {
   padding: 2px;
-  border: 1px Solid #999;
+  border: 1px Solid light-dark(#c5c5c5, #3f3f3f);
   font-size: 0.8em;
   margin-right: 5px;
   width: 35px;

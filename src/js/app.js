@@ -18,7 +18,7 @@
       var size =
         pskl.controller.settings.resize.DefaultSizeController.getDefaultSize();
       var fps = Constants.DEFAULT.FPS;
-      var descriptor = new pskl.model.piskel.Descriptor("New Piskel", "");
+      var descriptor = new pskl.model.piskel.Descriptor("Image", "");
       var piskel = new pskl.model.Piskel(
         size.width,
         size.height,

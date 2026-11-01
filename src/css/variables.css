@@ -1,4 +1,7 @@
 html,
+:root {
+  color-scheme: light dark;
+}
 body {
-  --highlight-color: gold;
+  --highlight-color: light-dark(#bb0606, #ff0d0d);
 }

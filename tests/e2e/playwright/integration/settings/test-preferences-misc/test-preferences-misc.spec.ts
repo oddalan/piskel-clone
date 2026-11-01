@@ -81,6 +81,24 @@ test.describe('Preferences — Misc tab', () => {
       $('[data-test-id="primary-color-picker"]').spectrum('hide');
     });
 
+    // Switch to HSL format
+    await openMiscPreferences(page);
+    await page.locator('.color-format-select').selectOption('hsl');
+    await wait(200);
+    await closeMiscPreferences(page);
+
+    // Open color picker again and verify HSL format
+    await page.evaluate(() => document.querySelectorAll('.tooltip').forEach(t => t.remove()));
+    await replacer.click();
+    const hslValue = await spInput.inputValue();
+    expect(hslValue).toContain('hsl');
+
+    // Close picker
+    await page.evaluate(() => {
+      const $ = (window as any).$;
+      $('[data-test-id="primary-color-picker"]').spectrum('hide');
+    });
+
     // Switch back to hex
     await openMiscPreferences(page);
     await page.locator('.color-format-select').selectOption('hex');

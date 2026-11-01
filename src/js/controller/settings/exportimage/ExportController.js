@@ -6,6 +6,10 @@
       template: "templates/settings/export/png.html",
       controller: ns.PngExportController
     },
+    svg: {
+      template: "templates/settings/export/svg.html",
+      controller: ns.SvgExportController
+    },
     gif: {
       template: "templates/settings/export/gif.html",
       controller: ns.GifExportController

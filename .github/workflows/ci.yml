@@ -9,7 +9,7 @@ on:
         type: choice
         options:
           - all
-          - ubuntu-latest
+          - ubuntu-24.04
           - macos-latest
         default: 'all'
   push:
@@ -21,7 +21,7 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -35,7 +35,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ${{ github.event.inputs.os == 'all' && fromJson('["ubuntu-latest","macos-latest"]') || github.event.inputs.os && fromJson(format('["{0}"]', github.event.inputs.os)) || fromJson('["ubuntu-latest","macos-latest"]') }}
+        os: ${{ github.event.inputs.os == 'all' && fromJson('["ubuntu-24.04","macos-latest"]') || github.event.inputs.os && fromJson(format('["{0}"]', github.event.inputs.os)) || fromJson('["ubuntu-24.04","macos-latest"]') }}
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
